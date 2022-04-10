@@ -1,0 +1,136 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Road Rage', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+/* Start Nav */
+nav {
+    min-height: 88px;
+}
+nav ul .nav-link {
+    color: #fefefe
+}
+nav ul .nav-link.active {
+    color: var(--yellow-color);
+}
+nav ul .nav-link:hover,
+nav ul .nav-link:focus {
+    color: var(--green-color);
+}
+.navbar-toggler {
+    color: #fefefe;
+    border: 1px solid #fefefe;
+}
+.navbar-toggler:focus, 
+.navbar-toggler:Hover {
+    box-shadow: none;
+    border: 1px solid var(--green-color);
+}
+.search .svg-inline--fa {
+    color: #FFF;
+    border-left: 2px solid var(--bs-cyan);
+    padding-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.search .svg-inline--fa:hover {
+    color: var(--green-color);
+}
+/* End Nav */
+/* Start Landing */
+.landing {
+    height: calc(100vh - 88px);
+}
+/* End Landing */
+/* Good At */
+.good-at .img::before,
+.portfolio .img::before,
+.stuff .img::before,
+.blog .img::before {
+    content: "";
+    width: 120px;
+    height: 2px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-color);
+}
+.icon-header {
+    height: 200px;
+}
+.icon-header .number {
+    font-size: 12rem;
+    color: var(--section-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icon-header .icon {
+    font-size: 4rem;
+    color: var(--green-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.good-at h4 {
+    color: var(--yellow-color);
+}
+/* Good At */
+/* Portfolio */
+.portfolio {
+    background-color: var(--section-color);
+}
+.portfolio ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.portfolio .row .cont1 .box {
+    overflow: hidden;
+}
+.portfolio .row .cont1 .box::before {
+    content: attr(data-work);
+    height: 100%; 
+    width: 101%;
+    position: absolute;
+    left: -50.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00bcd4e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FEFEFE;
+    font-size: 1.5rem;
+    transition: .3s;
+    cursor: pointer;
+    z-index: 2;
+}
+.portfolio .row .cont1 .box:hover::before {
+    left: 50%;
+}
+.portfolio .row .cont1 .box img {
+    transition: .3s;
+}
+.portfolio .row .cont1 .box:hover img {
+    transform: rotate(5deg) scale(1.1);
+}
+/* Portfolio */
+/* team */
+.team {
+    background-color: var(--section-color);
+}
+/* team */
+/* form */
+.form [type="text"] {
+    outline: none;
+}
+.form [type="text"]::placeholder {
+    color: #FFF;
+}
+/* form */
